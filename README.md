@@ -9,28 +9,7 @@ The simulator uses a **Two-Layer Routing Architecture** to manage aircraft movem
 
 ## ✨ Key Features
 - **Optimal Pathfinding:** Dijkstra for global routing and A* for local grid navigation.
-- **Dynamic Disruptions:** Moving storm zones that reduce aircraft speed and introduce a probabilistic crash risk.
-- **Safety Systems:** 
-    - **Altitude Management:** Detects coordinate overlaps and assigns different altitudes (8,000ft vs 12,000ft) to prevent collisions.
-    - **Fuel Constraints:** Paths are only valid if they fall within the aircraft's tank capacity.
+-  - **Altitude Management:** Detects coordinate overlaps and assigns different altitudes (8,000ft vs 12,000ft) to prevent collisions.
+- **Fuel Constraints:** Paths are only valid if they fall within the aircraft's tank capacity.
 - **Emergency Logic:** Automatic rerouting to the nearest airport upon detecting a fuel leak.
 - **Config-Driven:** All airports, routes, and aircraft are loaded from `defaultConfig.txt`.
-
-## 🛠️ Technical Stack
-- **Language:** C++14
-- **Build System:** CMake 3.17+
-- **Data Structures:** 
-    - `std::priority_queue` for efficient algorithm implementation.
-    - `std::vector` and `std::tuple` for grid and coordinate management.
-    - Adjacency lists for graph representation.
-- **Concepts Applied:** Object-Oriented Programming (OOP), Dynamic Memory Management, File I/O, and Exception Handling.
-
-## 📁 Project Structure
-```text
-├── DATA/               # Simulation configuration files
-├── HEADERS/            # Class declarations (.h files)
-├── IMPLEMENTATIONS/    # Logic implementation (.cpp files)
-├── build/              # Compiled binaries and CMake cache
-├── CMakeLists.txt      # Build configuration
-└── main.cpp            # Program entry point
-
